@@ -1,16 +1,18 @@
 {
-  "name": "kalana-3.2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "sit725-week4-database",
+  "version": "4.0.0",
+  "description": "SIT725 Week 4 – Database Integration with MongoDB (Ravenclaw Library)",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "seed": "node seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["SIT725", "mongodb", "express", "nodejs"],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^8.13.2"
   }
 }

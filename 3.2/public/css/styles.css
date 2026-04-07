@@ -209,3 +209,34 @@ h1, h2, h3, h4, .brand-logo {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Genre badge and year display on cards */
+.genre-badge {
+    display: inline-block;
+    background: rgba(60, 120, 216, 0.2);
+    border: 1px solid rgba(60, 120, 216, 0.4);
+    color: #7aa8f0;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.year-text {
+    color: rgba(240, 234, 214, 0.5);
+    font-size: 0.8rem;
+}
+
+.click-me-button {
+    background-color: var(--wv-bronze) !important;
+    color: #000 !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.gallery-container {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
