@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Ravenclaw Library – A wizarding world book archive powered by MongoDB. Browse and contribute to the collection.">
+    <title>The Ravenclaw Library | SIT725 Week 4</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="ravenclaw-nav z-depth-1">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo white-text">
+                <i class="wv-blue-text material-icons left">school</i>The Ravenclaw Library
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" class="white-text">News</a></li>
+                <li><a href="#" class="white-text">Discover</a></li>
+                <li><a href="#" class="btn wv-blue-btn white-text waves-effect waves-light modal-trigger" data-target="modal1" id="navAddBookBtn">Add a book</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-body">
+        <div class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h1 class="header-text white-text">RAVENCLAW</h1>
+                        <p class="promo-text">Wit, Learning, Wisdom. Explore the archives of the most gifted minds in the wizarding world.</p>
+                        <a class="waves-effect waves-light btn-large bronze-btn click-me-button" id="clickMeButton">
+                            Enter Archives
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container gallery-container">
+            <div class="row" id="card-section"></div>
+        </div>
+
+        <div class="newsletter-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 offset-m3 center-align">
+                        <h4 class="white-text">Eagle's Bulletin</h4>
+                        <p class="parchment-text">Subscribe to receive the latest scrolls and updates from the Library.</p>
+                        <div class="input-field inline" style="width: 70%;">
+                            <input id="email_inline" type="email" class="validate">
+                            <label for="email_inline">Wizarding Email</label>
+                        </div>
+                        <a class="btn wv-blue-btn white-text waves-effect waves-light" id="subscribeBtn">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="center-align" style="margin: 60px 0;">
+            <a class="waves-effect waves-light btn-large modal-trigger wv-blue-btn" href="#modal1" id="addBookBtn">
+                <i class="material-icons left">add_circle</i>Add a book
+            </a>
+        </div>
+
+        <!-- Add a Book Modal -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4 class="wv-blue-text">Contribute Knowledge</h4>
+                <p class="grey-text">Add a new tome to the Ravenclaw archive. All fields are required.</p>
+                <div class="row">
+                    <form class="col s12" id="addBookForm">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="book_name" type="text" class="validate" required>
+                                <label for="book_name">Book Title</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="author_name" type="text" class="validate" required>
+                                <label for="author_name">Author / Scholar</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="book_genre" type="text" class="validate" required>
+                                <label for="book_genre">Genre (e.g. Fantasy, Mystery)</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="book_year" type="number" class="validate" min="1000" max="2099" required>
+                                <label for="book_year">Publication Year</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="book_desc" class="materialize-textarea" required></textarea>
+                                <label for="book_desc">Magical Properties / Description</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer" style="background: transparent;">
+                <a href="#!" class="waves-effect waves-blue btn-flat white-text" id="formSubmit">Submit</a>
+                <a href="#!" class="modal-close waves-effect waves-red btn-flat grey-text">Close</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="bronze-text">The Ravenclaw Library</h5>
+                    <p class="grey-text text-lighten-4">Knowledge is power. Guard it well.</p>
+                    <p class="grey-text text-lighten-4" style="font-size:0.8rem;">SIT725 Week 4 – Database Integration with MongoDB</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Hogwarts Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Ministry of Magic</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center-align grey-text">
+                © 2026 Wizarding World | Ravenclaw House | SIT725
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
