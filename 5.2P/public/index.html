@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A minimal read-only Books Catalog built with MVC architecture">
+    <title>Books Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <!-- Hero / Header -->
+        <header class="hero">
+            <div class="hero-content">
+                <span class="hero-badge">MVC Catalog</span>
+                <h1>Books Catalog</h1>
+                <p class="hero-subtitle">A curated collection of timeless and modern literature</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container">
+            <div class="stats-bar" id="stats-bar"></div>
+            <div id="books-list" class="books-list">
+                <!-- Book items will be injected here via JS -->
+                <div class="loading-spinner" id="loader">
+                    <div class="spinner"></div>
+                    <p>Loading books…</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>SIT725 — Task 5.2P &middot; MVC Architecture</p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
