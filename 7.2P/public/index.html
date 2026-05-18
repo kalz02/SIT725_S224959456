@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT725 - Socket Programming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Data Dashboard</h1>
+        <p>This page receives live updates from the server using Sockets.</p>
+        
+        <div class="status">
+            Status: <span id="socket-status">Connecting...</span>
+        </div>
+
+        <div class="data-section">
+            <div class="data-box">
+                <h3>Random Value 1:</h3>
+                <p id="value1">0</p>
+            </div>
+            <div class="data-box">
+                <h3>Random Value 2:</h3>
+                <p id="value2">0</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="send-btn">Get New Data</button>
+        </div>
+
+        <div class="log">
+            <h4>Last update: <span id="time">None</span></h4>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
